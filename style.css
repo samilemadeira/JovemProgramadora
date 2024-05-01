@@ -1,0 +1,127 @@
+:root {
+	--bege: #FAF2D3;
+	--amarelo: #F4E869;
+	--azulescuro: #3085C3;
+	--azulclaro: #5CD2E6;
+}	
+
+
+/* Ajustes gerais */
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	font-family: helvetica, sans-serif; 
+	background: var(--azulclaro);
+
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+main {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	flex-wrap: wrap;
+}
+
+/* Cabeçalho e rodapé */
+header, footer {
+	width: 100%;
+	padding: 30px;
+	overflow: hidden;
+	text-align: center;
+	background: var(--azulescuro);
+	color: black;
+}
+footer {
+	text-align: right;
+	padding-top: 100px;
+	color: black;
+}
+
+/* Barra de navegação */
+#navbar {
+	width: 100%;
+	overflow: hidden;
+	background: var(--azulescuro);
+}
+#navbar ul {
+	list-style-type: none; /* Tira as bolinhas */
+	margin: 0;
+	padding: 0;
+	
+}
+#navbar ul li {
+	float: left; /* Pra ficar um do lado do outro */
+}
+#navbar ul li a {
+	text-decoration: none;
+	padding: 14px 16px;
+	display: block;
+	color: black;
+	background: var(--azulescuro);
+}
+#navbar ul li a:hover {
+	color: black;
+	background: var(--azulclaro);
+}
+
+/* Coluna Laterais */
+.coluna {
+	width: 20%;
+	padding: 20px;
+	float: left;
+
+}
+
+/* Coluna Central */
+article {
+	width: 60%;
+	padding: 20px 15%;
+	float: left;
+	background: var(--bege);
+	text-align: justify;
+}
+
+article img {
+	width: 40%;
+	display: block;
+	margin: auto;
+}
+
+
+/*responsivo*/
+@media screen and (max-width: 1200px) {
+	article	{
+		padding: 20px 10%;
+	}
+}
+
+/* Telas médias */
+@media screen and (max-width: 800px) {
+	.coluna {
+		width: 30%;
+	}
+	article {
+		width: 70%;
+	}
+	aside.coluna {
+		/*flex-basis: content;
+		padding: 0;*/
+		/*width: 100%;*/
+		display: none;
+	}
+}
+
+/* Telas pequenas */
+@media screen and (max-width: 600px) {
+	.coluna {
+		width: 100%;
+	}
+	article {
+		width: 100%;
+	}
+}

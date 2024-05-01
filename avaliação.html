@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="pc.png">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Projeto Integrador</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		:root {
+			--bege: #FAF2D3;
+			--amarelo: #F4E869;
+			--azulescuro: #3085C3;
+			--azulclaro: #5CD2E6;
+		}
+		article div {
+			max-width: 400px;
+			margin: auto;
+			text-align: center;
+		}
+		article div p {
+			text-align: center;
+		}
+		#botao_nao, #botao_sim {
+			background-color: var(--bege);
+			border-radius: 900px;
+			font-size: 1.5em;
+			padding: 15px 20px;
+			margin: 10px;
+		}
+		#botao_nao:hover, #botao_sim:hover {
+			background-color: var(--azulescuro);
+		}
+		@media (hover: none) {
+			#botao_nao:hover {
+				background-color: var(--bege);
+			}
+		}
+	</style>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<script type="text/javascript">
+		function runaway() {
+			let distanciaX = Math.round(Math.random()*100)+100;
+			let sinalX = Math.round(Math.random())*2 -1;
+			let distanciaY = Math.round(Math.random()*70)+70;
+			let sinalY = Math.round(Math.random())*2 -1;
+
+			anime({
+				targets: '#botao_nao',
+				translateX: '+=' + distanciaX*sinalX,
+				translateY: '+=' + distanciaY*sinalY,
+				easing: 'easeOutCirc'
+			});
+		}
+
+	</script>
+
+</head>
+<body>
+<!-- Cabeçalho -->
+<header>
+	<h1>Jovem Programadora</h1>
+	<p>Informações sobre o curso oferecido pelo Senac - Vila Velha</p>
+</header>
+
+<!-- Barra de navegação -->
+<nav id="navbar">
+	<ul>
+		<li><a href="index.html">Página principal</a></li>
+		<li><a href="alunas.html">Opinião das alunas</a></li>
+				<li><a href="avaliação.html">Avaliação</a></li>
+
+	</ul>
+</nav>
+
+<!-- Conteúdo principal -->
+<main>
+	<!-- Coluna à esquerda -->
+	<nav class="coluna"></nav>
+
+
+	<!-- Coluna central -->
+	<article>
+		<div>
+			<p>O site foi informativo? Dê sua avaliação!</p>
+			<!-- <button>&#x1F44D;</button> -->
+			<form action='https://89907414-1f18-4d45-9d3a-4b2a5c9ac587-00-nle758encixk.riker.replit.dev/samile/index.php' method='post'>
+				<input id="botao_sim" type='submit' value='&#x1F44D;' name='sub'>
+				<button id="botao_nao" 
+					onmouseover="runaway()"
+					onclick="runaway()"
+					ontouchstart="runaway()"
+				>&#x1F44E;</button>
+			</form>
+			
+
+
+
+		</div>
+	</article>
+
+	<!-- Coluna à direita -->
+	<aside class="coluna"></aside>
+</main>
+
+<!-- Rodapé -->
+<footer>
+	<p>2024</p>
+	<p>Desenvolvido por: <a target="_blank" href="https://www.instagram.com/mdsamilee">@mdsamilee</a></p>
+	<p>Para o curso Jovem Programadora - Senac - Vila Velha</p>
+</footer>
+
+</body>
+</html>
