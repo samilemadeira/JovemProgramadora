@@ -100,18 +100,17 @@ article img {
 	}
 }
 
-/* Telas médias */
-@media screen and (max-width: 800px) {
+/*telas médias*/
+@media screen and (max-width: 1000px) {
 	.coluna {
 		width: 30%;
 	}
-	article {
+
+	article{
 		width: 70%;
+		padding: 20px;
 	}
 	aside.coluna {
-		/*flex-basis: content;
-		padding: 0;*/
-		/*width: 100%;*/
 		display: none;
 	}
 }
@@ -120,8 +119,10 @@ article img {
 @media screen and (max-width: 600px) {
 	.coluna {
 		width: 100%;
+		display: none;
 	}
-	article {
+
+	article{
 		width: 100%;
 	}
 }
